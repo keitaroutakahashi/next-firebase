@@ -1,6 +1,6 @@
-import './globals.css'
 import { Inter } from 'next/font/google'
 import { UserProvider } from '@auth0/nextjs-auth0/client'
+import '~/styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,9 +15,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <UserProvider>
-        <body className={inter.className}>{children}</body>
+        <body className={`${inter.className} text-black`}>{children}</body>
       </UserProvider>
     </html>
   )
