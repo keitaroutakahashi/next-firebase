@@ -15,7 +15,7 @@ const LINK = [
 
 export const Sidebar: React.FC<Props> = ({ currentPath }) => {
   return (
-    <div className="h-screen shadow-lg isolate">
+    <div className="isolate h-screen shadow-lg">
       <div className="p-2">
         <h1>
           <Image
@@ -26,9 +26,9 @@ export const Sidebar: React.FC<Props> = ({ currentPath }) => {
           />
         </h1>
       </div>
-      <div className="flex flex-col bg-primary-light justify-center items-center py-5">
-        <div className="w-16 h-16 rounded-full bg-slate-300"></div>
-        <p className="font-bold text-sm mt-3">株式会社 菊地</p>
+      <div className="flex flex-col items-center justify-center bg-primary-light py-5">
+        <div className="h-16 w-16 rounded-full bg-slate-300"></div>
+        <p className="mt-3 text-sm font-bold">株式会社 菊地</p>
       </div>
       <nav className="px-5 py-6">
         <ul className="text-sm">

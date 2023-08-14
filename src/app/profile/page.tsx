@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react'
-import { withPageAuthRequired } from '@auth0/nextjs-auth0'
-import ServerComponent from '../components/server-components'
-import ClientComponent from '../components/client-components'
+import { withPageAuthRequired } from "@auth0/nextjs-auth0"
+import React, { Suspense } from "react"
+import ClientComponent from "../components/client-components"
+import ServerComponent from "../components/server-components"
 
 export default withPageAuthRequired(
   async function Page() {
@@ -18,5 +18,5 @@ export default withPageAuthRequired(
       </main>
     )
   },
-  { returnTo: '/profile' }
+  { returnTo: "/profile" },
 )

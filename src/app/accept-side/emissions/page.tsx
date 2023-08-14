@@ -1,3 +1,3 @@
 export default async function Emissions() {
-  return <div className="bg-white rounded-md p-3">emissions</div>
+  return <div className="rounded-md bg-white p-2">emissions</div>
 }
