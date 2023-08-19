@@ -1,5 +1,5 @@
-import { Main } from "~/app/accept-side//components/Main"
-import { Sidebar } from "~/app/accept-side//components/Sidebar"
+import { Main } from "@/app/accept-side//components/Main"
+import { Sidebar } from "@/app/accept-side//components/Sidebar"
 
 export default function DashboardLayout({
   children,
