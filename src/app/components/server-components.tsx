@@ -1,8 +1,17 @@
-import { getSession, getAccessToken } from '@auth0/nextjs-auth0'
+import { getSession, getAccessToken } from "@auth0/nextjs-auth0"
+import { headers } from "next/headers"
 
 export default async function Page() {
   const session = await getSession()
   const accessToken = await getAccessToken()
+
+  console.log("accessToken", accessToken)
+
+  const res = await fetch("http://localhost:3000/api/profile", {
+    headers: { authorization: accessToken.accessToken || "" },
+  })
+  const profile = await res.json()
+  console.log(profile)
 
   if (session) {
     return (

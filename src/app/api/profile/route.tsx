@@ -1,10 +1,28 @@
-import { getSession, withApiAuthRequired } from '@auth0/nextjs-auth0'
-import { NextResponse } from 'next/server'
+import console from "console"
+import {
+  getSession,
+  withApiAuthRequired,
+  getAccessToken,
+} from "@auth0/nextjs-auth0"
+import { NextResponse } from "next/server"
 
-const GET = withApiAuthRequired(async () => {
-  const session = await getSession()
+const GET = async (req: Request) => {
+  console.log("req", req.headers.get("authorization"))
+  // const session = await getSession()
+  // const accessToken = await getAccessToken()
 
-  return NextResponse.json(session?.user)
-})
+  // console.log(session, "session")
+  // console.log(accessToken, "accessToken")
+
+  return NextResponse.json({ a: "a" })
+}
 
 export { GET }
+
+// const GET = withApiAuthRequired(async () => {
+//   const session = await getSession()
+
+//   return NextResponse.json(session?.user)
+// })
+
+// export { GET }

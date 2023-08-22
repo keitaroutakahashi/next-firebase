@@ -18,5 +18,5 @@ export default withPageAuthRequired(
       </main>
     )
   },
-  { returnTo: "/profile" },
+  { returnTo: "/about" },
 )
